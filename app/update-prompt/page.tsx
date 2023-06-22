@@ -5,7 +5,7 @@ import { useRouter,useSearchParams } from 'next/navigation'
 
 import Form from '@components/Form'
 
-export const EditPrompt = () => {
+ const EditingPrompts = () => {
 
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -69,4 +69,4 @@ export const EditPrompt = () => {
   )
 }
 
-export default EditPrompt
+export default EditingPrompts
