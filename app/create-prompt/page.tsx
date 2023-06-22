@@ -5,9 +5,8 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 
 import Form from '@components/Form'
-import ts from 'typescript'
 
-export const CreatePrompt = () => {
+export default function CreatePrompt(){
 
   const {data: session} = useSession()
   const router = useRouter()
@@ -55,5 +54,3 @@ export const CreatePrompt = () => {
     />
   )
 }
-
-export default CreatePrompt
