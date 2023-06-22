@@ -31,7 +31,9 @@ export const Feed = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch('/api/prompt')
+      const response = await fetch('/api/prompt',{
+        method: 'GET',
+      })
       const data = await response.json()
       console.log('fetch',data)
       setPosts(data)
