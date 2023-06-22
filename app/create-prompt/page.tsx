@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 
 import Form from '@components/Form'
 
-export default function CreatePrompt(){
+export const CreatePrompt = () => {
 
   const {data: session} = useSession()
   const router = useRouter()
@@ -17,7 +17,7 @@ export default function CreatePrompt(){
     tag: '',
   })
 
-  const createPrompt = async (e: React.FormEvent) => {
+  const createdPrompt = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitting(true)
 
@@ -50,7 +50,9 @@ export default function CreatePrompt(){
       post={post}
       setPost={setPost}
       submitting={submitting}
-      handleSubmit={createPrompt}
+      handleSubmit={createdPrompt}
     />
   )
 }
+
+export default CreatePrompt
